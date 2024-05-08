@@ -9,7 +9,7 @@ part 'beer.g.dart';
 @freezed
 class Beer with _$Beer {
   const factory Beer({
-    required String id,
+    required int id,
     required String name,
     required String tagline,
     @JsonKey(name: 'first_brewed') required String firstBrewed,
@@ -26,7 +26,7 @@ class Beer with _$Beer {
     required Volume volume,
     @JsonKey(name: 'boil_volume') required Volume boilVolume,
     required BrewingMethod method,
-    required List<Ingredient> ingredients,
+    required Ingredient ingredients,
     @JsonKey(name: 'food_pairing') required List<String> foodPairing,
     @JsonKey(name: 'brewers_tips') required String brewersTips,
     @JsonKey(name: 'contributed_by') required String contributedBy,

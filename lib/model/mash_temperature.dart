@@ -7,7 +7,7 @@ part 'mash_temperature.g.dart';
 @freezed
 class MashTemperature with _$MashTemperature {
   const factory MashTemperature({
-    @JsonKey(name: "temp") required Temperature temp,
+    @JsonKey(name: 'temp') required Temperature temp,
     required int? duration,
   }) = _MashTemperature;
 
