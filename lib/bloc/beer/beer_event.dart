@@ -4,6 +4,8 @@ part of 'beer_bloc.dart';
 class BeerEvent with _$BeerEvent {
   const factory BeerEvent.loadMore() = _LoadMoreBeerEvent;
 
+  const factory BeerEvent.tryAgain() = _TryAgainBeerEvent;
+
   const factory BeerEvent.error() = _ErrorBeerEvent;
 
   const factory BeerEvent.onData({

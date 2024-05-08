@@ -22,6 +22,15 @@ class BeerBloc extends Bloc<BeerEvent, BeerState> {
       _fetchCurrentPage();
     });
 
+    on<_TryAgainBeerEvent>((event, emit) {
+      emit(BeerState.loading(
+        filter: state.filter,
+        beers: state.beers,
+        currentPage: state.currentPage,
+      ));
+      _fetchCurrentPage();
+    });
+
     on<_SetFilterBeerEvent>((event, emit) {
       if (event.filter == state.filter) {
         return;
@@ -63,6 +72,13 @@ class BeerBloc extends Bloc<BeerEvent, BeerState> {
       return;
     }
     add(const BeerEvent.loadMore());
+  }
+
+  void retryLoading() {
+    if (state.isLoading || !state.hasError || state.hasReachedEnd) {
+      return;
+    }
+    add(const BeerEvent.tryAgain());
   }
 
   void _fetchCurrentPage() async {

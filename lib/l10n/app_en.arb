@@ -1,4 +1,8 @@
 {
   "@@locale": "en",
-  "appTitle": "Rate the beers"
+  "appTitle": "Rate the beers",
+  "listTitle": "List of beers",
+  "failedToLoadMoreMessage": "Failed to load more!",
+  "tryAgainCallToAction": "Try again",
+  "moreInfoCallToAction": "More info"
 }

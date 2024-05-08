@@ -17,7 +17,7 @@ class CachedImageProvider {
 
   const CachedImageProvider({
     required this.url,
-    required this.canUseDebugFallback,
+    this.canUseDebugFallback = true,
   });
 
   ImageProvider get provider {

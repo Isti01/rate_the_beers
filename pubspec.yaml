@@ -46,5 +46,54 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/debug_placeholder.png
-    - assets/transparent_placeholder.png
+    - assets/
+    - assets/google_fonts/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/google_fonts/Poppins-Thin.ttf
+          weight: 100
+        - asset: assets/google_fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/google_fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/google_fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/google_fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/google_fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/google_fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/google_fonts/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/google_fonts/Poppins-Black.ttf
+          weight: 900
+        - asset: assets/google_fonts/Poppins-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/google_fonts/Poppins-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/google_fonts/Poppins-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/google_fonts/Poppins-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/google_fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/google_fonts/Poppins-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/google_fonts/Poppins-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/google_fonts/Poppins-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/google_fonts/Poppins-BlackItalic.ttf
+          weight: 900
+          style: italic
