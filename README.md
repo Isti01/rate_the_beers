@@ -1,4 +1,4 @@
-# rate_the_beers
+# Rate The Beers
 
 An application for rating beers
 
