@@ -13,8 +13,8 @@ class AppBlocProviders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        ProxyProvider<BeerRepository, BeerBloc>(
-          update: (_, repository, __) => BeerBloc(beerRepository: repository),
+        BlocProvider< BeerBloc>(
+          create: (context) => BeerBloc(beerRepository: context.read()),
         )
       ],
       child: child,

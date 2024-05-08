@@ -4,5 +4,6 @@
   "listTitle": "List of beers",
   "failedToLoadMoreMessage": "Failed to load more!",
   "tryAgainCallToAction": "Try again",
-  "moreInfoCallToAction": "More info"
+  "moreInfoCallToAction": "More info",
+  "searchHintText": "Search..."
 }

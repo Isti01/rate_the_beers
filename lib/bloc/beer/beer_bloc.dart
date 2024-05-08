@@ -81,10 +81,16 @@ class BeerBloc extends Bloc<BeerEvent, BeerState> {
     add(const BeerEvent.tryAgain());
   }
 
+  void updateFilter(String filter) {
+    final trimmedFilter = filter.trim();
+    final newFilter = trimmedFilter.isEmpty ? null : trimmedFilter;
+    add(BeerEvent.setFilter(filter: newFilter));
+  }
+
   void _fetchCurrentPage() async {
     final pageToFetch = state.currentPage;
     return beerRepository
-        .fetchBeers(page: pageToFetch)
+        .fetchBeers(page: pageToFetch, filter: state.filter)
         .then((beers) => BeerEvent.onData(beers: beers))
         .then(add)
         .onError((error, stackTrace) {
