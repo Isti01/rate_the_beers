@@ -5,5 +5,9 @@
   "failedToLoadMoreMessage": "Failed to load more!",
   "tryAgainCallToAction": "Try again",
   "moreInfoCallToAction": "More info",
-  "searchHintText": "Search..."
+  "searchHintText": "Search...",
+  "ingredientsHeading": "Ingredients",
+  "abvLabel": "abv",
+  "ibuLabel": "ibu",
+  "yeastIngredient": "yeast"
 }

@@ -17,32 +17,35 @@ class BeerListAppBar extends StatelessWidget {
         ),
       ),
       elevation: 8,
-      child: SizedBox(
-        width: double.infinity,
-        height: 164,
-        child: Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 40,
-              vertical: 36,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  localizations.listTitle,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 32,
-                    fontWeight: FontWeight.w800,
-                    height: 1.475,
+      child: SafeArea(
+        bottom: false,
+        child: SizedBox(
+          width: double.infinity,
+          height: 164,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+                vertical: 36,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    localizations.listTitle,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                      height: 1.475,
+                    ),
                   ),
-                ),
-                const SizedBox(width: 5),
-                SizedBox.square(dimension: 32, child: Image.asset(kBeerIcon))
-              ],
+                  const SizedBox(width: 5),
+                  SizedBox.square(dimension: 32, child: Image.asset(kBeerIcon))
+                ],
+              ),
             ),
           ),
         ),

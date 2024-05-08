@@ -15,8 +15,11 @@ class BeerListPage extends StatelessWidget {
         slivers: [
           const SliverToBoxAdapter(child: BeerListAppBar()),
           const SliverToBoxAdapter(child: BeerListSearchBar()),
-          BlocBuilder<BeerBloc, BeerState>(
-            builder: (context, state) => BeerList(state: state),
+          SliverSafeArea(
+            top: false,
+            sliver: BlocBuilder<BeerBloc, BeerState>(
+              builder: (context, state) => BeerList(state: state),
+            ),
           )
         ],
       ),
