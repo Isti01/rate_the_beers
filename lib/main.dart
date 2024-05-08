@@ -25,5 +25,7 @@ Future<void> initLogging() async {
     );
     return true;
   };
-  Bloc.observer = const LoggingBlocObserver();
+  if (kDebugMode) {
+    Bloc.observer = const LoggingBlocObserver();
+  }
 }
