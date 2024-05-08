@@ -51,4 +51,3 @@ app.*.map.json
 /**/*.freezed.dart
 /**/*.g.dart
 ios/Podfile.lock
-.metadata
