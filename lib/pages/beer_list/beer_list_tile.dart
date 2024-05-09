@@ -82,16 +82,22 @@ class BeerListTile extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          BeerAppFilledButton(
-            color: Colors.black,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => BeerPage(beer: beer),
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 200),
+            child: SizedBox(
+              width: double.infinity,
+              child: BeerAppFilledButton(
+                color: Colors.black,
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => BeerPage(beer: beer),
+                  ),
+                ),
+                child: Text(
+                  localizations.moreInfoCallToAction,
+                  style: const TextStyle(color: Colors.white),
+                ),
               ),
-            ),
-            child: Text(
-              localizations.moreInfoCallToAction,
-              style: const TextStyle(color: Colors.white),
             ),
           )
         ],

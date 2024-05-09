@@ -24,8 +24,8 @@ class BeerAppFilledButton extends StatelessWidget {
         shape: MaterialStatePropertyAll(kAppBorderRadius),
         padding: MaterialStatePropertyAll(
           EdgeInsets.symmetric(
-            vertical: large ? 24 : 20,
-            horizontal: large ? 64 : 58,
+            vertical: large ? 16 : 12,
+            horizontal: large ? 32 : 24,
           ),
         ),
       ),
