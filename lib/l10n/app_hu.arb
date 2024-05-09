@@ -1,0 +1,13 @@
+{
+  "@@locale": "hu",
+  "appTitle": "Rate the beers",
+  "listTitle": "Sörök listája",
+  "failedToLoadMoreMessage": "Nem sikerült a betöltés!",
+  "tryAgainCallToAction": "Újra",
+  "moreInfoCallToAction": "Részletek",
+  "searchHintText": "Keresés...",
+  "ingredientsHeading": "Hozzávalók",
+  "abvLabel": "alkohol",
+  "ibuLabel": "ibu",
+  "yeastIngredient": "élesztő"
+}
