@@ -5,7 +5,7 @@ import 'package:rate_the_beers/l10n/localization_util.dart';
 import 'package:rate_the_beers/model/beer.dart';
 import 'package:rate_the_beers/pages/beer/beer_page.dart';
 import 'package:rate_the_beers/theme/app_theme.dart';
-import 'package:rate_the_beers/util/cached_Image_provider.dart';
+import 'package:rate_the_beers/util/cached_image_provider.dart';
 
 class BeerListTile extends StatelessWidget {
   final Beer beer;
