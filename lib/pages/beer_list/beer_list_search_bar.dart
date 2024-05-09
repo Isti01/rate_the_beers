@@ -26,7 +26,7 @@ class _BeerListSearchBarState extends State<BeerListSearchBar> {
     _controller = TextEditingController(text: filter);
 
     _subscription = _filterSubject
-        .debounceTime(const Duration(milliseconds: 500))
+        .debounceTime(const Duration(milliseconds: 250))
         .listen((filter) {
       if (!mounted) {
         return;

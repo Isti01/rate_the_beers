@@ -7,8 +7,8 @@ import 'package:rate_the_beers/util/is_valid_url.dart';
 
 final _kImageCacheManager = CacheManager(Config(
   'beer_app_image_cache',
-  stalePeriod: const Duration(days: 7),
-  maxNrOfCacheObjects: 100,
+  stalePeriod: const Duration(days: 30),
+  maxNrOfCacheObjects: 250,
 ));
 
 class CachedImageProvider {

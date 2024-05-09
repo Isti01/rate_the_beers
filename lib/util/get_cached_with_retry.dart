@@ -6,8 +6,8 @@ import 'package:retry/retry.dart';
 
 final _kApiCacheManager = CacheManager(Config(
   'beer_app_api_cache',
-  stalePeriod: const Duration(days: 7),
-  maxNrOfCacheObjects: 100,
+  stalePeriod: const Duration(days: 30),
+  maxNrOfCacheObjects: 250,
 ));
 
 Future<String> getCachedWithRetry(Uri uri) async {
