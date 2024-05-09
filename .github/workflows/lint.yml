@@ -13,10 +13,10 @@ jobs:
           cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
           channel: 'stable'
       - run: flutter --version
+      - name: Check format
+        run: dart format lib --set-exit-if-changed --summary line -o none
       - run: flutter create . --platforms android
       - run: flutter pub get
       - run: dart run build_runner build --delete-conflicting-outputs
       - name: Run Lint
         run: flutter analyze
-      - name: Check format
-        run: dart format lib --set-exit-if-changed --summary line -o none
