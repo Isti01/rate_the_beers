@@ -6,6 +6,7 @@ import 'package:rate_the_beers/model/beer.dart';
 import 'package:rate_the_beers/pages/beer/beer_page.dart';
 import 'package:rate_the_beers/theme/app_theme.dart';
 import 'package:rate_the_beers/util/cached_image_provider.dart';
+import 'package:rate_the_beers/util/rewrite_image_url.dart';
 
 class BeerListTile extends StatelessWidget {
   final Beer beer;
@@ -37,7 +38,10 @@ class BeerListTile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 12),
             child: Image(
               height: 100,
-              image: CachedImageProvider(url: beer.imageUrl).provider,
+              image: CachedImageProvider(
+                url: beer.imageUrl,
+                transformUrl: rewriteImageUrl,
+              ).provider,
             ),
           ),
         ),

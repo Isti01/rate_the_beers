@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rate_the_beers/model/beer.dart';
 import 'package:rate_the_beers/theme/app_theme.dart';
 import 'package:rate_the_beers/util/cached_image_provider.dart';
+import 'package:rate_the_beers/util/rewrite_image_url.dart';
 
 class BeerPageAppBar extends StatelessWidget {
   final Beer beer;
@@ -19,7 +20,10 @@ class BeerPageAppBar extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Image(
               height: 260,
-              image: CachedImageProvider(url: beer.imageUrl).provider,
+              image: CachedImageProvider(
+                url: beer.imageUrl,
+                transformUrl: rewriteImageUrl,
+              ).provider,
             ),
           )
         ],

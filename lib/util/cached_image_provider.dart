@@ -14,9 +14,11 @@ final _kImageCacheManager = CacheManager(Config(
 class CachedImageProvider {
   final String? url;
   final bool canUseDebugFallback;
+  final String Function(String url)? transformUrl;
 
   const CachedImageProvider({
     required this.url,
+    this.transformUrl,
     this.canUseDebugFallback = true,
   });
 
@@ -30,7 +32,10 @@ class CachedImageProvider {
       }
     }
     if (isValidUrl(url)) {
-      return CachedNetworkImageProvider(url, cacheManager: _kImageCacheManager);
+      return CachedNetworkImageProvider(
+        transformUrl?.call(url) ?? url,
+        cacheManager: _kImageCacheManager,
+      );
     }
     return AssetImage(url);
   }
